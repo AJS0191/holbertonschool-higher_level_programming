@@ -10,7 +10,6 @@ str0 = "and is 0"
 strIs = "is {} ".format(lastD)
 if number < 0:
     lastD = (number * -1) % 10
-    print("{}".format(lastD))
     strIs = "is {} ".format(lastD * -1)
 
 if lastD == 0:

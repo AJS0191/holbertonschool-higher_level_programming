@@ -7,5 +7,3 @@ def max_integer(my_list=[]):
         return sorted(my_list)[x]
     else:
         return None
-
-    

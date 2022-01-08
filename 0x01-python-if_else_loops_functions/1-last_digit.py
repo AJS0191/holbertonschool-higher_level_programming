@@ -9,8 +9,8 @@ str0 = "and is 0"
 
 strIs = "is {} ".format(lastD)
 if number < 0:
-    lastD = (number * -1) % 10
-    strIs = "is {} ".format(lastD * -1)
+    lastD = ((number * -1) % 10) * -1
+    strIs = "is {} ".format(lastD)
 
 if lastD == 0:
     print("{}{}{}".format(strF, strIs, str0))

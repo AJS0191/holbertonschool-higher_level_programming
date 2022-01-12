@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-"""Contains the class Square, with exceptions, and two methods, and can print."""
+"""Contains the class Square, with exceptions, and 2 methods, and prints."""
 
 
 class Square:

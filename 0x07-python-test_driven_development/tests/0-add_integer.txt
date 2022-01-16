@@ -1,0 +1,20 @@
+First import add.
+    >>> add_integer = __import__("0-add_integer").add_integer
+
+It should raise an exception for a nonfloat, non-integer:
+    >>> add_integer('z', 1)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+It should raise an exception for a nonfloat, non-integer:
+    >>> add_integer(1, 'Z')
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+It should return the sum of two integer:
+    >>> add_integer(2, 2)
+    4
+
+It should convert floats to ints and return the sum:
+    >>> add_integer(1.00000, 1.00000)
+    2

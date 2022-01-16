@@ -1,0 +1,26 @@
+Start by importing say_my_name
+    >>> say_my_name = __import__("3-say_my_name").say_my_name
+
+If the input is two strings they will be printed in a standard greeting:
+    >>> say_my_name("Robert", "Hamilton")
+    My name is Robert Hamilton
+
+If the input is only a single string it will do the same:
+    >>> say_my_name("Brutus")
+    My name is Brutus 
+
+If the first name is not a string it will raise an exception:
+    >>> say_my_name(21, "Jumpstreet")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+If the last name is not a string it will raise an exception:
+    >>> say_my_name("Colton", 45)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+If the object passed is a list:
+    >>> say_my_name(["Moe", "Sezlac"])
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+    

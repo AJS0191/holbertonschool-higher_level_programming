@@ -1,0 +1,35 @@
+First import matrix_divided.
+    >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+Under perfect cirmumstances returns a matrix that was divided:
+    >>> matrix_divided([ [2, 2], [2, 2], [2, 2] ], 2)
+    [[1.0, 1.0], [1.0, 1.0], [1.0, 1.0]]
+
+Rounds number to two decimals if not evenly divided:
+    >>> matrix_divided([ [2, 2], [2, 2], [2, 2] ], 3)
+    [[0.67, 0.67], [0.67, 0.67], [0.67, 0.67]]
+
+Raises an exception if div is not a number:
+    >>> matrix_divided([ [2, 2], [2, 2], [2, 2] ], "I'm not a number!")
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+Raises an exception if part of matrix is not a number:
+    >>> matrix_divided([ [2, "not a number"], [2, 2], [2, 2] ], 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Raises an exception if matrix is made of different sized lists:
+    >>> matrix_divided([ [2, 2], [2, 2, 2], [2, 2] ], 2)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+
+Raises an exception if part of matrix is not a list:
+    >>> matrix_divided([ [2, 2], "I am not a list!", [2, 2] ], 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Raises an exception if div is 0:
+    >>> matrix_divided([ [2, 2], [2, 2], [2, 2] ], 0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero

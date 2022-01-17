@@ -18,3 +18,22 @@ It should return the sum of two integer:
 It should convert floats to ints and return the sum:
     >>> add_integer(1.00000, 1.00000)
     2
+
+It should return the number given plus 98 if only one is given:
+    >>> add_integer(55)
+    153
+
+If given no numbers it should return the number 98:
+    >>> add_integer()
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+If given a float that is NAN raises an error:
+    >>> add_integer(float("NAN"), 1)
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+
+If given an overflow float:
+    >>> add_integer(3.333333333333333333333333333333333, 4)
+    7
+    

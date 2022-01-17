@@ -39,4 +39,13 @@ If given a medium sized integer:
     ##########
     ##########
     ##########
-    
+
+If given no argument:
+    >>> print_square()
+    Traceback (most recent call last):
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
+If given a number less than zero:
+    >>> print_square(-5)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0

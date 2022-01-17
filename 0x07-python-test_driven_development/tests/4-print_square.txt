@@ -1,0 +1,43 @@
+First import print_square
+    >>> print_square = __import__("4-print_square").print_square
+
+If given an integer it will print a square of given size:
+    >>> print_square(5)
+    #####
+    #####
+    #####
+    #####
+    #####
+
+If given number is a float it will raise an exception:
+    >>> print_square(4.55555)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+If given number is not an integer it will raise an exception:
+    >>> print_square("Five")
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+If size given is zero nothing should print but a new line:
+    >>> print_square(0)
+    <BLANKLINE>
+
+If size given is less than 0, but is a float:
+    >>> print_square(-3.33333)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+If given a medium sized integer:
+    >>> print_square(10)
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    

@@ -21,7 +21,6 @@ If given number is not an integer it will raise an exception:
 
 If size given is zero nothing should print but a new line:
     >>> print_square(0)
-    <BLANKLINE>
 
 If size given is less than 0, but is a float:
     >>> print_square(-3.33333)

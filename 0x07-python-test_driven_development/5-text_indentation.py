@@ -2,6 +2,8 @@
 
 
 """This module contains the text indentation function"""
+
+
 def text_indentation(text):
     if type(text) is not str:
         raise TypeError("text must be a string")
@@ -17,5 +19,9 @@ def text_indentation(text):
                 print("{}".format(text[i]), end="\n\n")
                 if text[i + 1] == ' ':
                     i = i + 2
+                    a = 0
+                    while text[i + a] == ' ':
+                        a += 1
+                    i += a
                 else:
                     i = i + 1

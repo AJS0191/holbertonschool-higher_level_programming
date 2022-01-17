@@ -23,3 +23,8 @@ If not given a string:
 If given an empty string:
     >>> text_indentation("")
 
+If not given an argument:
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+    

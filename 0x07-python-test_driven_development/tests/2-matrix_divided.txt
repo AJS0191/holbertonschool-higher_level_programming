@@ -33,3 +33,13 @@ Raises an exception if div is 0:
     >>> matrix_divided([ [2, 2], [2, 2], [2, 2] ], 0)
     Traceback (most recent call last):
     ZeroDivisionError: division by zero
+
+Raises an exception if only one argument given:
+    >>> matrix_divided(4)
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Raises an exception if no arguments are given:
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'

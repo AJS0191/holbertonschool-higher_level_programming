@@ -1,0 +1,25 @@
+First import the text_indentation function:
+    >>> text_indentation = __import__("5-text_indentation").text_indentation
+
+If given a string with the seperators present:
+    >>> text_indentation("We. are all: seperated by? the specified seperators")
+    We.
+    <BLANKLINE>
+    are all:
+    <BLANKLINE>
+    seperated by?
+    <BLANKLINE>
+    the specified seperators
+    
+If given string has no seperators it will print itself:
+    >>> text_indentation("No seperators in me!")
+    No seperators in me!
+
+If not given a string:
+    >>> text_indentation(27)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+If given an empty string:
+    >>> text_indentation("")
+

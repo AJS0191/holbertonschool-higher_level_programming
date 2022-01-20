@@ -1,0 +1,50 @@
+First import the main testing file:
+    >>> MyList = __import__("1-my_list").MyList
+
+Test that we can set the class:
+    >>> thisList = MyList()
+    >>> type(thisList) is MyList
+    True
+    
+Test that we can set ints to object of class:
+    >>> thisList = MyList()
+    >>> thisList.append(1)
+    >>> print(thisList)
+    [1]
+
+Test that we can set multipme ints to object of class:
+    >>> thisList = MyList()
+    >>> thisList.append(1)
+    >>> thisList.append(4)
+    >>> thisList.append(6)
+    >>> thisList.append(2)
+    >>> print(thisList)
+    [1, 4, 6, 2]
+
+Test that we can sort a list of positive ints:
+    >>> thisList = MyList()
+    >>> thisList.append(1)
+    >>> thisList.append(4)
+    >>> thisList.append(6)
+    >>> thisList.append(2)
+    >>> thisList.print_sorted()
+    [1, 2, 4, 6]
+
+Test that we can sort with a negative present:
+    >>> thisList = MyList()
+    >>> thisList.append(1)
+    >>> thisList.append(4)
+    >>> thisList.append(6)
+    >>> thisList.append(-2)
+    >>> thisList.print_sorted()
+    [-2, 1, 4, 6]
+
+Test that we can sort with all negatives:
+>>> thisList = MyList()
+    >>> thisList.append(-1)
+    >>> thisList.append(-4)
+    >>> thisList.append(-22)
+    >>> thisList.append(-2)
+    >>> thisList.print_sorted()
+    [-22, -4, -2, -1]
+    

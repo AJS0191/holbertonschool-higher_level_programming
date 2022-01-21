@@ -1,0 +1,35 @@
+First import from the module:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Check we can set the class:
+    >>> someShape = BaseGeometry()
+    >>> type(someShape) is BaseGeometry
+    True
+
+Now we test the area exception:
+    >>> someShape = BaseGeometry()
+    >>> someShape.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+Now we test the validator method:
+    >>> someShape = BaseGeometry()
+    >>> someShape.integer_validator("Shrek", 21)
+
+Now we test the validator method with a string:
+    >>> someShape = BaseGeometry()
+    >>> someShape.integer_validator("Shrek", "Ogre")
+    Traceback (most recent call last):
+    TypeError: Shrek must be an integer
+
+Now we test the validator method with zero:
+    >>> someShape = BaseGeometry()
+    >>> someShape.integer_validator("Something", 0)
+    Traceback (most recent call last):
+    ValueError: Something must be greater than 0
+
+Now we test the validator method with a float:
+    >>> someShape = BaseGeometry()
+    >>> someShape.integer_validator("Shrek", 20.21)
+    Traceback (most recent call last):
+    TypeError: Shrek must be an integer

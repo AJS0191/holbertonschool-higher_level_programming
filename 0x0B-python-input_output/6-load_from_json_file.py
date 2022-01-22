@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """this module will contain the function load_from_json"""
 
 

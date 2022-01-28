@@ -77,3 +77,5 @@
 0x0C-python-almost_a_circle/models/__pycache__/base.cpython-38.pyc
 0x0C-python-almost_a_circle/models/__pycache__/rectangle.cpython-38.pyc
 0x0C-python-almost_a_circle/models/__pycache__/__init__.cpython-38.pyc
+0x0C-python-almost_a_circle/models/rectangle.py
+0x0C-python-almost_a_circle/7-main.py

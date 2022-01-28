@@ -87,7 +87,8 @@ class Rectangle(Base):
         return (self.__height * self.__width)
 
     def display(self):
-        """displays the rectangle with'#' charaters, now taking into accound positional arguments"""
+        """displays the rectangle with'#' charaters, now taking
+        into account positional arguments"""
         for a in range(self.__y):
             print('')
         for i in range(self.__height):
@@ -101,3 +102,25 @@ class Rectangle(Base):
         """the str value of the rectangle"""
         return "[Rectangle] ({}) {}/{} - {}/{}"\
             .format(self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def update(self, *args):
+        """updates self with new arguments with a no-keyword argument,
+        the order being id, width, height, x, y"""
+        if len(args) == 1:
+            self.id = args[0]
+        if len(args) == 2:
+            self.int_validator("width", args[1])
+            self.des_validator("width", args[1])
+            self.__width = args[1]
+        if len(args) == 3:
+            self.int_validator("height", args[2])
+            self.des_validator("height", args[2])
+            self.__height = args[2]
+        if len(args) == 4:
+            self.int_validator("x", args[3])
+            self.pos_validator("x", args[3])
+            self.__x = args[3]
+        if len(args) == 5:
+            self.int_validator("y", args[4])
+            self.pos_validator("y", args[4])
+            self.__y = args[4]

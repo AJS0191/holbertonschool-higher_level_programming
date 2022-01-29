@@ -2,7 +2,6 @@
 """this module contains the rectangle class"""
 
 
-import json
 Base = __import__('models.base').base.Base
 
 
@@ -45,48 +44,40 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """returns the width"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """sets the width of rectangle"""
         self.int_validator("width", value)
         self.des_validator("width", value)
         self.__width = value
 
     @property
     def height(self):
-        """returns the height"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """sets the height if the rectangle"""
         self.int_validator("height", value)
         self.des_validator("height", value)
         self.__height = value
 
     @property
     def x(self):
-        """returns the x pos"""
         return self.__x
 
     @x.setter
     def x(self, value):
-        """sets the x pos"""
         self.int_validator("x", value)
         self.pos_validator("x", value)
         self.__x = value
 
     @property
     def y(self):
-        """returns the y pos"""
         return self.__y
 
     @y.setter
     def y(self, value):
-        """sets the y pos"""
         self.int_validator("y", value)
         self.pos_validator("y", value)
         self.__y = value
@@ -112,12 +103,9 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}"\
             .format(self.id, self.__x, self.__y, self.__width, self.__height)
 
-    def update(self, *args, **kwargs):
+    def update(self, *args):
         """updates self with new arguments with a no-keyword argument,
         the order being id, width, height, x, y"""
-        if kwargs is not None:
-            for keyword, value in kwargs.items():
-                setattr(self, keyword, value)
         if len(args) == 1:
             self.id = args[0]
         if len(args) == 2:
@@ -136,14 +124,3 @@ class Rectangle(Base):
             self.int_validator("y", args[4])
             self.pos_validator("y", args[4])
             self.__y = args[4]
-
-    def to_dictionary(self):
-        """returns a dictionary refrence of self"""
-        refr = {'id': self.id, 'width': self.__width,
-                'height': self.__height, 'x': self.__x, 'y': self.__y}
-        return refr
-
-    @staticmethod
-    def from_json_string(json_string):
-        """makes a rectangle refrence from json string"""
-        return json.dumps(json_string)

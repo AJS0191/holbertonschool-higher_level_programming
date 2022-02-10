@@ -1,3 +1,3 @@
---- shows all databases
---- all of your databases listed
+-- shows all databases
+-- all of your databases listed
 SHOW databases;

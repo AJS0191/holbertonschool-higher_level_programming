@@ -4,7 +4,7 @@ import MySQLdb
 import sys
 
 
-def main():
+def state_id_name():
     """lists states names and ids """
     args = sys.argv
     db = MySQLdb.connect(host='localhost', port=3306, user=args[1], passwd=args[2], db=args[3])
@@ -18,4 +18,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    state_id_name()

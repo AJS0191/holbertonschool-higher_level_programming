@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Print names and id of states"""
+""" This module prints the names and id of states"""
+
 
 import sys
 from model_state import Base, State

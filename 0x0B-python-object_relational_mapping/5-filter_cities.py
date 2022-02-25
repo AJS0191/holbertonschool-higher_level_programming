@@ -17,8 +17,10 @@ def main():
     for row in rows:
             if row[1] == args[4]:
                 city_list.append(row[0])
-    for i in range(0, len(city_list) - 1):
-        print("{}".format(city_list[i]), end=", ")
+    i = 0
+    if len(city_list) > 1:
+        for i in range(0, len(city_list) - 1):
+            print("{}".format(city_list[i]), end=", ")
     i += 1
     print(city_list[i])
     cur.close

@@ -21,8 +21,12 @@ def main():
     if len(city_list) > 1:
         for i in range(0, len(city_list) - 1):
             print("{}".format(city_list[i]), end=", ")
-    i += 1
-    print(city_list[i])
+        i += 1
+        print(city_list[i])
+    elif len(city_list) == 1:
+        print(cit_list[0])
+    elif len(city_list) == 0:
+        print('')
     cur.close
     db.close
 

@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" This module prints the names and id of states that contain """
+""" adds Lousiana to the state table """
 
 
 import sys
@@ -21,4 +21,5 @@ if __name__ == "__main__":
     session.add(newState)
     addedState = session.query(State).filter_by(name='Louisiana').first()
     print(addedState.id)
+    session.commit()
     session.close()

@@ -10,7 +10,7 @@ def main():
     db = MySQLdb.connect(host='localhost', user=args[1],
                          passwd=args[2], db=args[3])
     cur = db.cursor()
-    cur.execute("SELECT id, name FROM states ORDER BY id ASC;")
+    cur.execute("SELECT * FROM states WHERE name = %s", [format(args[4])])
     rows = cur.fetchall()
     for row in rows:
         if row[1] == args[4]:

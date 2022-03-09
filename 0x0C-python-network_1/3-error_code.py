@@ -12,8 +12,8 @@ def main():
     try:
         with urllib.request.urlopen(url) as response:
             print(response)
-    except urllib.error.URLError as e:
-        print(e.reason)
+    except urllib.error.HTTPError as e:
+        print("Error code: {}".format(e.reason))
 
 
 if __name__ == "__main__":

@@ -2,6 +2,7 @@
 """displays response from url handles errors"""
 
 import urllib.request
+import urllib.error
 import sys
 
 

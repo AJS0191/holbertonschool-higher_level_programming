@@ -8,8 +8,8 @@ def main():
     """fetches a specific url"""
     r = requests.get('https://intranet.hbtn.io/status')
     print("Body response:")
-    print("    - type: {}".format(type(r.text)))
-    print("    - content: {}".format(r.text))
+    print("\t- type: {}".format(type(r.text)))
+    print("\t- content: {}".format(r.text))
 
 
 if __name__ is "__main__":

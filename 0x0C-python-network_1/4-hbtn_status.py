@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """fetches a specific url"""
 
-import requests
+import requests.get
 
 
 def main():

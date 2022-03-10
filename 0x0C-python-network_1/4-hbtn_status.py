@@ -1,16 +1,15 @@
 #!/usr/bin/python3
-"""fetches a specific url"""
 
 import requests
 
 
 def main():
-    """fetches a specific url"""
-    r = requests.get('https://intranet.hbtn.io/status')
+    """sending a request to holberton intranet"""
+    response = requests.get('https://intranet.hbtn.io/status')
     print("Body response:")
-    print("\t- type: {}".format(type(r.text)))
-    print("\t- content: {}".format(r.text))
+    print("\t- type: {}".format(type(response.encoding)))
+    print("\t- content: {}".format(response.text))
 
 
-if __name__ is "__main__":
+if __name__ == "__main__":
     main()

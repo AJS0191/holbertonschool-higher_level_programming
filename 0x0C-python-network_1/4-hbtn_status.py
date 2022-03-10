@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""sending a request to holberton intranet
+"""
 
 import requests
 

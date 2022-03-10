@@ -11,7 +11,7 @@ def main():
     url = args[1]
     email = args[2]
     payload = {'email': email}
-    r = requests.get(url, params=payload)
+    r = requests.post(url, data=payload)
     print(r.text)
 
 

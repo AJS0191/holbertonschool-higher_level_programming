@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """displays response from url handles errors"""
 
-from base64 import decode
 import urllib.request
 import urllib.error
 import sys

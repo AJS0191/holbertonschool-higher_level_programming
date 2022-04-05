@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const argvArray = process.argv;
-if (argvArray.length > 2) {
+if (argvArray[2] !== undefined) {
   const response = argvArray[2];
   console.log(response);
 } else {

@@ -6,15 +6,16 @@ class Rectangle {
       this.height = h;
     }
   }
-  print() {
+
+  print () {
     if (this.height !== undefined) {
       for (let i = 0; i < this.height; i++) {
         let theString = '';
         for (let x = 0; x < this.width; x++) {
           theString += 'X';
         }
-      console.log(theString);
-    }
+        console.log(theString);
+      }
     }
   }
 }

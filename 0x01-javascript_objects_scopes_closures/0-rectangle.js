@@ -1,5 +1,5 @@
-#!/usr/bin/node 
-function Rectangle() {
+#!/usr/bin/node
+function Rectangle () {
 
 }
-module.exports = Rectangle
+module.exports = Rectangle;

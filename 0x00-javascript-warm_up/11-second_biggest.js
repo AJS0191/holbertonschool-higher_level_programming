@@ -11,5 +11,4 @@ if (argvArray[2] === undefined) {
   }
 }
 const sortMe = givenArray.sort();
-console.log(sortMe);
 console.log(sortMe[sortMe.length - 2]);

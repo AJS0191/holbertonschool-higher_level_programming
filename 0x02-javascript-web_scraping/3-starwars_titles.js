@@ -2,7 +2,6 @@
 const request = require('request')
 const argvArray = process.argv;
 
-request(argvArray[2], function (error, response, body) {
-    console.log('code: ', response && response.statusCode);
-    console.log('body:', body);
+request('https://swapi-api.hbtn.io/api/films/' + argvArray[2], function (error, response, body) {
+    console.log(JSON.parse(body)['title']);
 })
